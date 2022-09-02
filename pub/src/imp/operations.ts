@@ -28,7 +28,7 @@ export const greaterThan: api.GreaterThan = ($) => {
 }
 
 export const smallerThan: api.SmallerThan = ($) => {
-    return $.that < $.that
+    return $.this < $.that
 }
 
 export const equal: api.Equal = ($) => {
