@@ -32,7 +32,7 @@ export const smallerThan: api.SmallerThan = ($) => {
 }
 
 export const equal: api.Equal = ($) => {
-    return $.that === $.that
+    return $.this === $.that
 }
 
 export const isZero: api.IsZero = ($) => {

@@ -41,8 +41,8 @@ export function createGetTestSet($d: {}): test.GetTestSet {
         createTest("isZero - yes", pub.isZero(0), true)
 
 
-        createTest("equals - yes", pub.equal({ this: 42, that: 42 }), true)
-        createTest("equals - not", pub.equal({ this: 42, that: 5 }), true)
+        createTest("equal - yes", pub.equal({ this: 42, that: 42 }), true)
+        createTest("equal - not", pub.equal({ this: 42, that: 5 }), false)
 
         createTest("smallerThan - not", pub.smallerThan({ this: 42, that: 42 }), false)
         createTest("smallerThan - yes", pub.smallerThan({ this: 41, that: 42 }), true)
