@@ -17,9 +17,9 @@
     "url": "git+https://github.com/corno/res-pareto-boolean.git"
   },
   "dependencies": {
-    "api-pareto-boolean": "^0.4.0",
-    "pareto-core-internals": "^0.7.0"
+    "api-pareto-boolean": "^0.5.0",
+    "pareto-core-internals": "^0.8.0"
   },
   "version": "0.5.0",
-  "content-fingerprint": "884771b607e876a52d9c3b0e612d7527dc9209bd"
+  "content-fingerprint": "8731987edbd411b5a56f0543a5dfd8fd8bffce8c"
 }
