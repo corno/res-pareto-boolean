@@ -20,6 +20,6 @@
     "api-pareto-boolean": "^0.5.0",
     "pareto-core-internals": "^0.8.0"
   },
-  "version": "0.5.0",
+  "version": "0.6.0",
   "content-fingerprint": "8731987edbd411b5a56f0543a5dfd8fd8bffce8c"
 }
