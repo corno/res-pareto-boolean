@@ -1,4 +1,4 @@
-import * as api from "api-pareto-boolean"
+import * as api from "../../interface"
 
 export const greaterThanImp: api.FGreaterThan = ($) => {
     return $.this > $.that

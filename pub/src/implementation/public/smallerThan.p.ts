@@ -1,4 +1,4 @@
-import * as api from "api-pareto-boolean"
+import * as api from "../../interface"
 import { smallerThanImp } from "../private/smallerThanImp.p"
 
 export const f_smallerThan: api.FSmallerThan = ($) => {

@@ -1,4 +1,4 @@
-import * as api from "api-pareto-boolean"
+import * as api from "../../interface"
 
 import * as pi from "pareto-core-internals"
 
