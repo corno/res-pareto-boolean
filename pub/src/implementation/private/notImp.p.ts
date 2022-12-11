@@ -1,4 +1,4 @@
-import * as api from "../../interface"
+import * as api from "../../api"
 
 export const notImp: api.FNot = ($) => {
     return !$

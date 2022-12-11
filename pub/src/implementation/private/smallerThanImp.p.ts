@@ -1,4 +1,4 @@
-import * as api from "../../interface"
+import * as api from "../../api"
 
 export const smallerThanImp: api.FSmallerThan = ($) => {
     return $.this < $.that

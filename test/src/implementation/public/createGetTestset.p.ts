@@ -22,29 +22,29 @@ export const createGetTestset: api.FCreateGetTestset =  () => {
             })
         }
 
-        createTest("not true", pub.f_not(true), false)
-        createTest("not false", pub.f_not(false), true)
+        createTest("not true", pub.$a.not(true), false)
+        createTest("not false", pub.$a.not(false), true)
 
-        createTest("and - empty", pub.f_and([]), true)
-        createTest("and - false", pub.f_and([false]), false)
-        createTest("and - trues", pub.f_and([true, true]), true)
+        createTest("and - empty", pub.$a.and([]), true)
+        createTest("and - false", pub.$a.and([false]), false)
+        createTest("and - trues", pub.$a.and([true, true]), true)
 
-        createTest("or - empty", pub.f_or([]), false)
-        createTest("or - falses", pub.f_or([false, false]), false)
-        createTest("or - true", pub.f_or([true]), true)
+        createTest("or - empty", pub.$a.or([]), false)
+        createTest("or - falses", pub.$a.or([false, false]), false)
+        createTest("or - true", pub.$a.or([true]), true)
 
-        createTest("isZero - not", pub.f_isZero(1), false)
-        createTest("isZero - yes", pub.f_isZero(0), true)
+        createTest("isZero - not", pub.$a.isZero(1), false)
+        createTest("isZero - yes", pub.$a.isZero(0), true)
 
 
-        createTest("equal - yes", pub.f_equal({ this: 42, that: 42 }), true)
-        createTest("equal - not", pub.f_equal({ this: 42, that: 5 }), false)
+        createTest("equal - yes", pub.$a.equal({ this: 42, that: 42 }), true)
+        createTest("equal - not", pub.$a.equal({ this: 42, that: 5 }), false)
 
-        createTest("smallerThan - not", pub.f_smallerThan({ this: 42, that: 42 }), false)
-        createTest("smallerThan - yes", pub.f_smallerThan({ this: 41, that: 42 }), true)
+        createTest("smallerThan - not", pub.$a.smallerThan({ this: 42, that: 42 }), false)
+        createTest("smallerThan - yes", pub.$a.smallerThan({ this: 41, that: 42 }), true)
 
-        createTest("greaterThan - not", pub.f_greaterThan({ this: 42, that: 42 }), false)
-        createTest("greaterThan - yes", pub.f_greaterThan({ this: 43, that: 42 }), true)
+        createTest("greaterThan - not", pub.$a.greaterThan({ this: 42, that: 42 }), false)
+        createTest("greaterThan - yes", pub.$a.greaterThan({ this: 43, that: 42 }), true)
 
         return pl.asyncValue({
             elements: builder.getDictionary()
