@@ -15,9 +15,7 @@ export const createGetTestset: api.FCreateGetTestset =  () => {
         function createTest(name: string, actual: boolean, expect: boolean) {
             builder.add(name, {
                 type: ["test", {
-                    type: ["boolean", {
-                        test: actual === expect,
-                    }]
+                    type: ["boolean", actual === expect]
                 }]
             })
         }
