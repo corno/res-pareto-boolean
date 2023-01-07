@@ -19,6 +19,6 @@
   "dependencies": {
     "pareto-core-internals": "^0.11.0"
   },
-  "version": "0.7.0",
+  "version": "0.8.0",
   "content-fingerprint": "7b205b05a3bffa54fce3a83d48e3875af84fcde7"
 }
