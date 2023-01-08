@@ -21,7 +21,7 @@ export const project: NProject.TProject = {
                     'imports': wd({
                     }),
                     'types': types({
-                        "BooleanRange": ["nested", bln()],
+                        "BooleanRange": ['nested', bln()],
                         "NumberPair": group({
                             "this": member(nr()),
                             "that": member(nr()),
@@ -65,38 +65,38 @@ export const project: NProject.TProject = {
                     'imports': wd({
                     }),
                     'algorithms': wd({
-                        "and": ["algorithm", {
-                            'type': ["function", {
+                        "and": ['algorithm', {
+                            'type': ['function', {
                                 'function': "And"
                             }],
                         }],
-                        "smallerThan": ["algorithm", {
-                            'type': ["function", {
+                        "smallerThan": ['algorithm', {
+                            'type': ['function', {
                                 'function': "SmallerThan"
                             }],
                         }],
-                        "greaterThan": ["algorithm", {
-                            'type': ["function", {
+                        "greaterThan": ['algorithm', {
+                            'type': ['function', {
                                 'function': "GreaterThan"
                             }],
                         }],
-                        "equal": ["algorithm", {
-                            'type': ["function", {
+                        "equal": ['algorithm', {
+                            'type': ['function', {
                                 'function': "Equal"
                             }],
                         }],
-                        "or": ["algorithm", {
-                            'type': ["function", {
+                        "or": ['algorithm', {
+                            'type': ['function', {
                                 'function': "Or"
                             }],
                         }],
-                        "not": ["algorithm", {
-                            'type': ["function", {
+                        "not": ['algorithm', {
+                            'type': ['function', {
                                 'function': "Not"
                             }],
                         }],
-                        "isZero": ["algorithm", {
-                            'type': ["function", {
+                        "isZero": ['algorithm', {
+                            'type': ['function', {
                                 'function': "IsZero"
                             }],
                         }],
