@@ -2,7 +2,6 @@ import * as pr from "pareto-core-raw"
 import {
     externalReference as er,
     string as str,
-    _null as nll,
     reference as ref,
     boolean as bln,
     number as nr,
@@ -10,15 +9,15 @@ import {
 import { dictionary, group, member, taggedUnion, types, _function } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
 
 
-import { string, _null, reference, externalReference, number, boolean } from "lib-pareto-typescript-project/dist/modules/api/api/shorthands.p"
+import { string, reference, externalReference, number, boolean } from "lib-pareto-typescript-project/dist/modules/api/api/shorthands.p"
 import * as NProject from "lib-pareto-typescript-project/dist/modules/project"
 const wd = pr.wrapRawDictionary
 export const project: NProject.TProject = {
-    resource: true,
-    modules: wd({
+    'resource': true,
+    'modules': wd({
         "main": {
-            definition: {
-                "glossary": {
+            'definition': {
+                'glossary': {
                     'imports': wd({
                     }),
                     'types': types({
@@ -29,9 +28,6 @@ export const project: NProject.TProject = {
                         }),
                     }),
                     'functions': wd({
-
-
-
                         "And": {
                             "data": reference("BooleanRange"),
                             "return value": boolean()
@@ -65,51 +61,51 @@ export const project: NProject.TProject = {
                     }),
                     'interfaces': wd({}),
                 },
-                "api": {
-                    "imports": wd({
+                'api': {
+                    'imports': wd({
                     }),
-                    "algorithms": wd({
+                    'algorithms': wd({
                         "and": ["algorithm", {
-                            type: ["function", {
-                                function: "And"
+                            'type': ["function", {
+                                'function': "And"
                             }],
                         }],
                         "smallerThan": ["algorithm", {
-                            type: ["function", {
-                                function: "SmallerThan"
+                            'type': ["function", {
+                                'function': "SmallerThan"
                             }],
                         }],
                         "greaterThan": ["algorithm", {
-                            type: ["function", {
-                                function: "GreaterThan"
+                            'type': ["function", {
+                                'function': "GreaterThan"
                             }],
                         }],
                         "equal": ["algorithm", {
-                            type: ["function", {
-                                function: "Equal"
+                            'type': ["function", {
+                                'function': "Equal"
                             }],
                         }],
                         "or": ["algorithm", {
-                            type: ["function", {
-                                function: "Or"
+                            'type': ["function", {
+                                'function': "Or"
                             }],
                         }],
                         "not": ["algorithm", {
-                            type: ["function", {
-                                function: "Not"
+                            'type': ["function", {
+                                'function': "Not"
                             }],
                         }],
                         "isZero": ["algorithm", {
-                            type: ["function", {
-                                function: "IsZero"
+                            'type': ["function", {
+                                'function': "IsZero"
                             }],
                         }],
                     })
                 },
             },
-            implementation: {}
+            'implementation': {}
 
         },
     }),
-    main: "main"
+    'main': "main"
 }
