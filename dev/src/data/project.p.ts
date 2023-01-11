@@ -13,13 +13,12 @@ import { string, reference, externalReference, number, boolean } from "lib-paret
 import * as NProject from "lib-pareto-typescript-project/dist/modules/project"
 const wd = pr.wrapRawDictionary
 export const project: NProject.TProject = {
-    'resource': true,
+    'type': ['resource', null],
     'modules': wd({
         "main": {
             'definition': {
                 'glossary': {
-                    'imports': wd({
-                    }),
+                    'imports': wd({}),
                     'types': types({
                         "BooleanRange": ['nested', bln()],
                         "NumberPair": group({
@@ -57,49 +56,55 @@ export const project: NProject.TProject = {
                             "return value": boolean()
                         },
                     }),
-                    'callbacks': wd({
-                    }),
                     'interfaces': wd({}),
+                    'callbacks': wd({}),
+                    'pipes': wd({}),
                 },
                 'api': {
-                    'imports': wd({
-                    }),
+                    'imports': wd({}),
                     'algorithms': wd({
-                        "and": ['algorithm', {
-                            'type': ['function', {
+                        "and": {
+                            'definition': ['function', {
                                 'function': "And"
                             }],
-                        }],
-                        "smallerThan": ['algorithm', {
-                            'type': ['function', {
+                            'type': ['reference', null],
+                        },
+                        "smallerThan": {
+                            'definition': ['function', {
                                 'function': "SmallerThan"
                             }],
-                        }],
-                        "greaterThan": ['algorithm', {
-                            'type': ['function', {
+                            'type': ['reference', null],
+                        },
+                        "greaterThan": {
+                            'definition': ['function', {
                                 'function': "GreaterThan"
                             }],
-                        }],
-                        "equal": ['algorithm', {
-                            'type': ['function', {
+                            'type': ['reference', null],
+                        },
+                        "equal": {
+                            'definition': ['function', {
                                 'function': "Equal"
                             }],
-                        }],
-                        "or": ['algorithm', {
-                            'type': ['function', {
+                            'type': ['reference', null],
+                        },
+                        "or": {
+                            'definition': ['function', {
                                 'function': "Or"
                             }],
-                        }],
-                        "not": ['algorithm', {
-                            'type': ['function', {
+                            'type': ['reference', null],
+                        },
+                        "not": {
+                            'definition': ['function', {
                                 'function': "Not"
                             }],
-                        }],
-                        "isZero": ['algorithm', {
-                            'type': ['function', {
+                            'type': ['reference', null],
+                        },
+                        "isZero":{
+                            'definition': ['function', {
                                 'function': "IsZero"
                             }],
-                        }],
+                            'type': ['reference', null],
+                        },
                     })
                 },
             },
