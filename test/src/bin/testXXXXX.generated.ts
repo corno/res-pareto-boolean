@@ -1,6 +1,7 @@
 import * as pt from "pareto-core-types"
 import * as pr from "pareto-core-raw"
 import * as pl from "pareto-core-lib"
+import * as tst from "lib-pareto-test"
 
 import { test as main_and } from "../modules/main/and.p"
 import { test as main_equal } from "../modules/main/equal.p"
@@ -10,7 +11,7 @@ import { test as main_not } from "../modules/main/not.p"
 import { test as main_or } from "../modules/main/or.p"
 import { test as main_smallerThan } from "../modules/main/smallerThan.p"
 
-const x = pr.wrapRawDictionary({
+const x = pr.wrapRawDictionary<pt.Dictionary<() => pt.AsyncValue<tst.TTestElement>>>({
     "main": pr.wrapRawDictionary({
         "and": main_and,
         "equal": main_equal,
