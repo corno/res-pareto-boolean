@@ -1,4 +1,5 @@
 import * as pt from "pareto-core-types"
+import * as mcommon from "glo-pareto-common"
 
 export type TBooleanRange = pt.Nested<boolean>
 
@@ -7,16 +8,16 @@ export type TNumberPair = {
     readonly "this": number
 }
 
-export type FAnd = ($: TBooleanRange) => boolean
+export type FAnd = ($: TBooleanRange) => mcommon.TBoolean
 
-export type FEqual = ($: TNumberPair) => boolean
+export type FEqual = ($: TNumberPair) => mcommon.TBoolean
 
-export type FGreaterThan = ($: TNumberPair) => boolean
+export type FGreaterThan = ($: TNumberPair) => mcommon.TBoolean
 
-export type FIsZero = ($: number) => boolean
+export type FIsZero = ($: mcommon.TNumber) => mcommon.TBoolean
 
-export type FNot = ($: boolean) => boolean
+export type FNot = ($: mcommon.TBoolean) => mcommon.TBoolean
 
-export type FOr = ($: TBooleanRange) => boolean
+export type FOr = ($: TBooleanRange) => mcommon.TBoolean
 
-export type FSmallerThan = ($: TNumberPair) => boolean
+export type FSmallerThan = ($: TNumberPair) => mcommon.TBoolean

@@ -5,15 +5,15 @@ import {
     externalReference,
     group,
     member,
-    nullType,
     number as nr,
     boolean as bln,
-    type,
     reference as ref,
     string,
     taggedUnion,
     types,
     _function,
+    typeReference,
+    externalTypeReference,
 } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
 
 import {
@@ -30,7 +30,9 @@ const d = pr.wrapRawDictionary
 
 export const $: mmoduleDefinition.TModuleDefinition = {
     'glossary': {
-        'imports': d({}),
+        'imports': d({
+            "common": "glo-pareto-common",
+        }),
         'namespace': {
             'types': types({
                 "BooleanRange": ['nested', bln()],
@@ -44,32 +46,32 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         },
         'functions': d({
             "And": {
-                "data": reference("BooleanRange"),
-                "return value": boolean()
+                "data": typeReference("BooleanRange"),
+                "return value": externalTypeReference("common", "Boolean"),
             },
             "Or": {
-                "data": reference("BooleanRange"),
-                "return value": boolean()
+                "data": typeReference("BooleanRange"),
+                "return value": externalTypeReference("common", "Boolean"),
             },
             "GreaterThan": {
-                "data": reference("NumberPair"),
-                "return value": boolean()
+                "data": typeReference("NumberPair"),
+                "return value": externalTypeReference("common", "Boolean"),
             },
             "SmallerThan": {
-                "data": reference("NumberPair"),
-                "return value": boolean()
+                "data": typeReference("NumberPair"),
+                "return value": externalTypeReference("common", "Boolean"),
             },
             "Not": {
-                "data": boolean(),
-                "return value": boolean()
+                "data": externalTypeReference("common", "Boolean"),
+                "return value": externalTypeReference("common", "Boolean"),
             },
             "IsZero": {
-                "data": number(),
-                "return value": boolean()
+                "data": externalTypeReference("common", "Number"),
+                "return value": externalTypeReference("common", "Boolean"),
             },
             "Equal": {
-                "data": reference("NumberPair"),
-                "return value": boolean()
+                "data": typeReference("NumberPair"),
+                "return value": externalTypeReference("common", "Boolean"),
             },
         }),
         'callbacks': d({}),
