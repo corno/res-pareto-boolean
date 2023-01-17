@@ -1,6 +1,6 @@
-import * as pt from "pareto-core-types"
-import * as pr from "pareto-core-raw"
-import * as pl from "pareto-core-lib"
+import * as pt from 'pareto-core-types'
+import * as pr from 'pareto-core-raw'
+import * as pl from 'pareto-core-lib'
 import * as tst from "lib-pareto-test"
 
 import { test as main_and } from "../modules/main/and.p"
@@ -12,13 +12,13 @@ import { test as main_or } from "../modules/main/or.p"
 import { test as main_smallerThan } from "../modules/main/smallerThan.p"
 
 const x = pr.wrapRawDictionary<pt.Dictionary<() => pt.AsyncValue<tst.TTestElement>>>({
-    "main": pr.wrapRawDictionary({
-        "and": main_and,
-        "equal": main_equal,
-        "greaterThan": main_greaterThan,
-        "isZero": main_isZero,
-        "not": main_not,
-        "or": main_or,
-        "smallerThan": main_smallerThan,
+    'main': pr.wrapRawDictionary({
+        'and': main_and,
+        'equal': main_equal,
+        'greaterThan': main_greaterThan,
+        'isZero': main_isZero,
+        'not': main_not,
+        'or': main_or,
+        'smallerThan': main_smallerThan,
     }),
 }).asyncMap(($, key) => $.asyncMap(($, key) => $()))

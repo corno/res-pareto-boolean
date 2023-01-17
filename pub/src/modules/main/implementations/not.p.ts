@@ -1,5 +1,5 @@
 import * as api from "../api"
 
-export const inot: api.Cnot = ($) => {
+export const $$: api.Cnot = ($) => {
     return !$
 }

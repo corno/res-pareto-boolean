@@ -1,5 +1,5 @@
 import * as api from "../api"
 
-export const ismallerThan: api.CsmallerThan = ($) => {
+export const $$: api.CsmallerThan = ($) => {
     return $.this < $.that
 }

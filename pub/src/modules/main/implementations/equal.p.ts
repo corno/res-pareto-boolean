@@ -1,5 +1,5 @@
 import * as api from "../api"
 
-export const iequal: api.Cequal = ($) => {
+export const $$: api.Cequal = ($) => {
     return $.this === $.that
 }

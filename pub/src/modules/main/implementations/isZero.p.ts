@@ -1,5 +1,5 @@
 import * as api from "../api"
 
-export const iisZero: api.CisZero = ($) => {
+export const $$: api.CisZero = ($) => {
     return $ === 0
 }

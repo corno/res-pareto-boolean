@@ -1,11 +1,11 @@
-import * as pt from "pareto-core-types"
+import * as pt from 'pareto-core-types'
 import * as mcommon from "glo-pareto-common"
 
 export type TBooleanRange = pt.Nested<boolean>
 
 export type TNumberPair = {
-    readonly "that": number
-    readonly "this": number
+    readonly 'that': number
+    readonly 'this': number
 }
 
 export type FAnd = ($: TBooleanRange) => mcommon.TBoolean
