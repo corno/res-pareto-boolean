@@ -1,11 +1,11 @@
 import { API } from "./api"
-import { $$ as iand } from "./implementations/and.p"
-import { $$ as iequal } from "./implementations/equal.p"
-import { $$ as igreaterThan } from "./implementations/greaterThan.p"
-import { $$ as iisZero } from "./implementations/isZero.p"
-import { $$ as inot } from "./implementations/not.p"
-import { $$ as ior } from "./implementations/or.p"
-import { $$ as ismallerThan } from "./implementations/smallerThan.p"
+import { $$ as iand } from "./implementations/and.native"
+import { $$ as iequal } from "./implementations/equal.native"
+import { $$ as igreaterThan } from "./implementations/greaterThan.native"
+import { $$ as iisZero } from "./implementations/isZero.native"
+import { $$ as inot } from "./implementations/not.native"
+import { $$ as ior } from "./implementations/or.native"
+import { $$ as ismallerThan } from "./implementations/smallerThan.native"
 
 export const $a: API = {
     'and': iand,
