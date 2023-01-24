@@ -45,81 +45,58 @@ export const $: mmoduleDefinition.TModuleDefinition = {
 
         },
         'functions': d({
-            "And": {
-                "data": typeReference("BooleanRange"),
-                "return value": externalTypeReference("common", "Boolean"),
-            },
-            "Or": {
-                "data": typeReference("BooleanRange"),
-                "return value": externalTypeReference("common", "Boolean"),
-            },
-            "GreaterThan": {
-                "data": typeReference("NumberPair"),
-                "return value": externalTypeReference("common", "Boolean"),
-            },
-            "SmallerThan": {
-                "data": typeReference("NumberPair"),
-                "return value": externalTypeReference("common", "Boolean"),
-            },
-            "Not": {
-                "data": externalTypeReference("common", "Boolean"),
-                "return value": externalTypeReference("common", "Boolean"),
-            },
-            "IsZero": {
-                "data": externalTypeReference("common", "Number"),
-                "return value": externalTypeReference("common", "Boolean"),
-            },
-            "Equal": {
-                "data": typeReference("NumberPair"),
-                "return value": externalTypeReference("common", "Boolean"),
-            },
+            "And": _function( typeReference("BooleanRange"), externalTypeReference("common", "Boolean")),
+            "Or": _function( typeReference("BooleanRange"),externalTypeReference("common", "Boolean")),
+            "GreaterThan": _function( typeReference("NumberPair"), externalTypeReference("common", "Boolean")),
+            "SmallerThan":_function( typeReference("NumberPair"), externalTypeReference("common", "Boolean")),
+            "Not": _function( externalTypeReference("common", "Boolean"),externalTypeReference("common", "Boolean")),
+            "IsZero":_function( externalTypeReference("common", "Number"),externalTypeReference("common", "Boolean")),
+            "Equal": _function( typeReference("NumberPair"), externalTypeReference("common", "Boolean")),
         }),
-        'callbacks': d({}),
-        'pipes': d({}),
     },
     'api': {
         'imports': d({}),
         'algorithms': d({
             "and": {
-                'definition': ['function', {
+                'definition': {
                     'function': "And"
-                }],
+                },
                 'type': ['reference', null],
             },
             "smallerThan": {
-                'definition': ['function', {
+                'definition': {
                     'function': "SmallerThan"
-                }],
+                },
                 'type': ['reference', null],
             },
             "greaterThan": {
-                'definition': ['function', {
+                'definition': {
                     'function': "GreaterThan"
-                }],
+                },
                 'type': ['reference', null],
             },
             "equal": {
-                'definition': ['function', {
+                'definition': {
                     'function': "Equal"
-                }],
+                },
                 'type': ['reference', null],
             },
             "or": {
-                'definition': ['function', {
+                'definition': {
                     'function': "Or"
-                }],
+                },
                 'type': ['reference', null],
             },
             "not": {
-                'definition': ['function', {
+                'definition': {
                     'function': "Not"
-                }],
+                },
                 'type': ['reference', null],
             },
             "isZero": {
-                'definition': ['function', {
+                'definition': {
                     'function': "IsZero"
-                }],
+                },
                 'type': ['reference', null],
             },
         })

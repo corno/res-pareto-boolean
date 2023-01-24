@@ -8,16 +8,16 @@ export type TNumberPair = {
     readonly 'this': number
 }
 
-export type FAnd = ($: TBooleanRange) => mcommon.TBoolean
+export type FAnd = ($: TBooleanRange,) => mcommon.TBoolean
 
-export type FEqual = ($: TNumberPair) => mcommon.TBoolean
+export type FEqual = ($: TNumberPair,) => mcommon.TBoolean
 
-export type FGreaterThan = ($: TNumberPair) => mcommon.TBoolean
+export type FGreaterThan = ($: TNumberPair,) => mcommon.TBoolean
 
-export type FIsZero = ($: mcommon.TNumber) => mcommon.TBoolean
+export type FIsZero = ($: mcommon.TNumber,) => mcommon.TBoolean
 
-export type FNot = ($: mcommon.TBoolean) => mcommon.TBoolean
+export type FNot = ($: mcommon.TBoolean,) => mcommon.TBoolean
 
-export type FOr = ($: TBooleanRange) => mcommon.TBoolean
+export type FOr = ($: TBooleanRange,) => mcommon.TBoolean
 
-export type FSmallerThan = ($: TNumberPair) => mcommon.TBoolean
+export type FSmallerThan = ($: TNumberPair,) => mcommon.TBoolean
