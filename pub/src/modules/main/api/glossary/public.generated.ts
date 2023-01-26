@@ -1,12 +1,12 @@
 import * as pt from 'pareto-core-types'
+
+import * as t from './types.generated'
+
 import * as mcommon from "glo-pareto-common"
 
-export type TBooleanRange = pt.Nested<boolean>
+export type TBooleanRange = t.UBooleanRange
 
-export type TNumberPair = {
-    readonly 'that': number
-    readonly 'this': number
-}
+export type TNumberPair = t.UNumberPair
 
 export type FAnd = ($: TBooleanRange,) => mcommon.TBoolean
 

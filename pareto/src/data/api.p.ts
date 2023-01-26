@@ -30,25 +30,22 @@ export const $: mmoduleDefinition.TModuleDefinition = {
             "common": "glo-pareto-common",
         }),
         'parameters': d({}),
-        'namespace': {
-            'types': types({
-                "BooleanRange": ['nested', bln()],
-                "NumberPair": group({
-                    "this": member(nr()),
-                    "that": member(nr()),
-                }),
+        'types': types({
+            "BooleanRange": ['nested', bln()],
+            "NumberPair": group({
+                "this": member(nr()),
+                "that": member(nr()),
             }),
-            'interfaces': d({}),
-
-        },
+        }),
+        'interfaces': d({}),
         'functions': d({
-            "And": _function( typeReference("BooleanRange"), externalTypeReference("common", "Boolean")),
-            "Or": _function( typeReference("BooleanRange"),externalTypeReference("common", "Boolean")),
-            "GreaterThan": _function( typeReference("NumberPair"), externalTypeReference("common", "Boolean")),
-            "SmallerThan":_function( typeReference("NumberPair"), externalTypeReference("common", "Boolean")),
-            "Not": _function( externalTypeReference("common", "Boolean"),externalTypeReference("common", "Boolean")),
-            "IsZero":_function( externalTypeReference("common", "Number"),externalTypeReference("common", "Boolean")),
-            "Equal": _function( typeReference("NumberPair"), externalTypeReference("common", "Boolean")),
+            "And": _function(typeReference("BooleanRange"), externalTypeReference("common", "Boolean")),
+            "Or": _function(typeReference("BooleanRange"), externalTypeReference("common", "Boolean")),
+            "GreaterThan": _function(typeReference("NumberPair"), externalTypeReference("common", "Boolean")),
+            "SmallerThan": _function(typeReference("NumberPair"), externalTypeReference("common", "Boolean")),
+            "Not": _function(externalTypeReference("common", "Boolean"), externalTypeReference("common", "Boolean")),
+            "IsZero": _function(externalTypeReference("common", "Number"), externalTypeReference("common", "Boolean")),
+            "Equal": _function(typeReference("NumberPair"), externalTypeReference("common", "Boolean")),
         }),
     },
     'api': {
