@@ -30,6 +30,7 @@ export const $: mmoduleDefinition.TModuleDefinition = {
             "common": "glo-pareto-common",
         }),
         'parameters': d({}),
+        'templates': d({}),
         'types': types({
             "BooleanRange": ['nested', bln()],
             "NumberPair": group({
