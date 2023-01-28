@@ -2,25 +2,21 @@ import * as pr from 'pareto-core-raw'
 import {
     array,
     dictionary,
-    externalReference,
     group,
     member,
-    number as nr,
-    boolean as bln,
-    reference as ref,
+    number,
     string,
     taggedUnion,
     types,
     _function,
     typeReference,
-    externalTypeReference,
+    nested,
+    boolean,
 } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
 
-import { definitionReference, externalDefinitionReference, constructor } from "lib-pareto-typescript-project/dist/modules/moduleDefinition/api/shorthands.p"
-
+import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/modules/moduleDefinition/api/shorthands.p"
 
 import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/modules/moduleDefinition"
-
 
 const d = pr.wrapRawDictionary
 
@@ -32,68 +28,33 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         'parameters': d({}),
         'templates': d({}),
         'types': types({
-            "BooleanRange": ['nested', bln()],
+            "BooleanRange": nested(boolean()),
             "NumberPair": group({
-                "this": member(nr()),
-                "that": member(nr()),
+                "this": member(number()),
+                "that": member(number()),
             }),
         }),
         'interfaces': d({}),
         'functions': d({
-            "And": _function(typeReference("BooleanRange"), externalTypeReference("common", "Boolean")),
-            "Or": _function(typeReference("BooleanRange"), externalTypeReference("common", "Boolean")),
-            "GreaterThan": _function(typeReference("NumberPair"), externalTypeReference("common", "Boolean")),
-            "SmallerThan": _function(typeReference("NumberPair"), externalTypeReference("common", "Boolean")),
-            "Not": _function(externalTypeReference("common", "Boolean"), externalTypeReference("common", "Boolean")),
-            "IsZero": _function(externalTypeReference("common", "Number"), externalTypeReference("common", "Boolean")),
-            "Equal": _function(typeReference("NumberPair"), externalTypeReference("common", "Boolean")),
+            "And": _function(typeReference("BooleanRange"), typeReference("common", "Boolean")),
+            "Or": _function(typeReference("BooleanRange"), typeReference("common", "Boolean")),
+            "GreaterThan": _function(typeReference("NumberPair"), typeReference("common", "Boolean")),
+            "SmallerThan": _function(typeReference("NumberPair"), typeReference("common", "Boolean")),
+            "Not": _function(typeReference("common", "Boolean"), typeReference("common", "Boolean")),
+            "IsZero": _function(typeReference("common", "Number"), typeReference("common", "Boolean")),
+            "Equal": _function(typeReference("NumberPair"), typeReference("common", "Boolean")),
         }),
     },
     'api': {
         'imports': d({}),
         'algorithms': d({
-            "and": {
-                'definition': {
-                    'function': "And"
-                },
-                'type': ['reference', null],
-            },
-            "smallerThan": {
-                'definition': {
-                    'function': "SmallerThan"
-                },
-                'type': ['reference', null],
-            },
-            "greaterThan": {
-                'definition': {
-                    'function': "GreaterThan"
-                },
-                'type': ['reference', null],
-            },
-            "equal": {
-                'definition': {
-                    'function': "Equal"
-                },
-                'type': ['reference', null],
-            },
-            "or": {
-                'definition': {
-                    'function': "Or"
-                },
-                'type': ['reference', null],
-            },
-            "not": {
-                'definition': {
-                    'function': "Not"
-                },
-                'type': ['reference', null],
-            },
-            "isZero": {
-                'definition': {
-                    'function': "IsZero"
-                },
-                'type': ['reference', null],
-            },
+            "and": algorithm(definitionReference("And")),
+            "smallerThan": algorithm(definitionReference("SmallerThan")),
+            "greaterThan": algorithm(definitionReference("GreaterThan")),
+            "equal": algorithm(definitionReference("Equal")),
+            "or": algorithm(definitionReference("Or")),
+            "not": algorithm(definitionReference("Not")),
+            "isZero": algorithm(definitionReference("IsZero")),
         })
     },
 }
