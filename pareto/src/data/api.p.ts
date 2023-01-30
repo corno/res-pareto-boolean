@@ -8,15 +8,16 @@ import {
     string,
     taggedUnion,
     types,
-    _function,
     typeReference,
     nested,
     boolean,
-} from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
+    func,
+    data,
+} from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands.p"
 
-import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/modules/moduleDefinition/api/shorthands.p"
+import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/submodules/moduleDefinition/shorthands.p"
 
-import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/modules/moduleDefinition"
+import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/submodules/moduleDefinition"
 
 const d = pr.wrapRawDictionary
 
@@ -36,13 +37,13 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         }),
         'interfaces': d({}),
         'functions': d({
-            "And": _function(typeReference("BooleanRange"), typeReference("common", "Boolean")),
-            "Or": _function(typeReference("BooleanRange"), typeReference("common", "Boolean")),
-            "GreaterThan": _function(typeReference("NumberPair"), typeReference("common", "Boolean")),
-            "SmallerThan": _function(typeReference("NumberPair"), typeReference("common", "Boolean")),
-            "Not": _function(typeReference("common", "Boolean"), typeReference("common", "Boolean")),
-            "IsZero": _function(typeReference("common", "Number"), typeReference("common", "Boolean")),
-            "Equal": _function(typeReference("NumberPair"), typeReference("common", "Boolean")),
+            "And": func(typeReference("BooleanRange"), null, null, data(typeReference("common", "Boolean"), false)),
+            "Or": func(typeReference("BooleanRange"), null, null, data(typeReference("common", "Boolean"), false)),
+            "GreaterThan": func(typeReference("NumberPair"), null, null, data(typeReference("common", "Boolean"), false)),
+            "SmallerThan": func(typeReference("NumberPair"), null, null, data(typeReference("common", "Boolean"), false)),
+            "Not": func(typeReference("common", "Boolean"), null, null, data(typeReference("common", "Boolean"), false)),
+            "IsZero": func(typeReference("common", "Number"), null, null, data(typeReference("common", "Boolean"), false)),
+            "Equal": func(typeReference("NumberPair"), null, null, data(typeReference("common", "Boolean"), false)),
         }),
     },
     'api': {
