@@ -13,6 +13,7 @@ import {
     boolean,
     func,
     data,
+    type,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands.p"
 
 import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/submodules/moduleDefinition/shorthands.p"
@@ -21,19 +22,18 @@ import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/submodule
 
 const d = pr.wrapRawDictionary
 
-export const $: mmoduleDefinition.TModuleDefinition = {
+export const $: mmoduleDefinition.T.ModuleDefinition = {
     'glossary': {
         'imports': d({
             "common": "glo-pareto-common",
         }),
         'parameters': d({}),
-        'templates': d({}),
-        'types': types({
-            "BooleanRange": nested(boolean()),
-            "NumberPair": group({
+        'types': d({
+            "BooleanRange": type(nested(boolean())),
+            "NumberPair": type(group({
                 "this": member(number()),
                 "that": member(number()),
-            }),
+            })),
         }),
         'interfaces': d({}),
         'functions': d({

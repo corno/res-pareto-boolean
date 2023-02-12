@@ -4,8 +4,8 @@
   "description": "a pareto wrapper boolean operations as Pareto lacks them",
 
   "dependencies": {
-    "glo-pareto-common": "^0.11.0",
-    "pareto-core-internals": "^0.11.1"
+    "glo-pareto-common": "^0.0.0",
+    "pareto-core-internals": "^0.0.0"
   },
   "files": [
     "dist"

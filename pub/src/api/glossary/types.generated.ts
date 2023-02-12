@@ -2,13 +2,24 @@ import * as pt from 'pareto-core-types'
 
 import * as mcommon from "glo-pareto-common"
 
-export namespace GBooleanRange {}
-export type GBooleanRange = pt.Nested<boolean>
-export type UBooleanRange = GBooleanRange
-
-export namespace GNumberPair {}
-export type GNumberPair = {
-    readonly 'that': number
-    readonly 'this': number
+export namespace T {
+    
+    export namespace BooleanRange {
+        
+        export type N = boolean
+    }
+    
+    export type BooleanRange = pt.Nested<boolean>
+    
+    export namespace NumberPair {
+        
+        export type that = number
+        
+        export type _lthis = number
+    }
+    
+    export type NumberPair = {
+        readonly 'that': number
+        readonly 'this': number
+    }
 }
-export type UNumberPair = GNumberPair
