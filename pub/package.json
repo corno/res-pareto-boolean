@@ -2,20 +2,17 @@
   "author": "Corno",
   "license": "ISC",
   "description": "a pareto wrapper boolean operations as Pareto lacks them",
+
   "dependencies": {
-    "glo-pareto-common": "^0.12.0",
-    "pareto-core-internals": "^0.11.1"
+    "glo-pareto-common": "^0.0.0",
+    "pareto-core-internals": "^0.0.0"
   },
   "files": [
     "dist"
   ],
   "repository": {
-    "type": "git",
-    "url": "http://github.com/corno/res-pareto-boolean.git"
+    "type": "git"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "name": "res-pareto-boolean",
-  "version": "0.16.0",
-  "content-fingerprint": "bb3e7ada3bd2a244adbe9b6ac5799f91d6766c1f"
+  "types": "dist/index.d.ts"
 }
