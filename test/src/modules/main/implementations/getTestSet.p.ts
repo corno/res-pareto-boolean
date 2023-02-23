@@ -33,7 +33,6 @@ export const $$:CgetTestSet = () => {
     createTest("isZero - not", gpub.$a.isZero(1), false)
     createTest("isZero - yes", gpub.$a.isZero(0), true)
 
-
     createTest("equal - yes", gpub.$a.equal({ this: 42, that: 42 }), true)
     createTest("equal - not", gpub.$a.equal({ this: 42, that: 5 }), false)
 
