@@ -1,5 +1,5 @@
-import * as api from "../api"
+import { CisZero } from "../api"
 
-export const $$: api.CisZero = ($) => {
+export const $$:CisZero = ($) => {
     return $ === 0
 }

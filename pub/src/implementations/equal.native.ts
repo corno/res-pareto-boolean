@@ -1,5 +1,5 @@
-import * as api from "../api"
+import { Cequal } from "../api"
 
-export const $$: api.Cequal = ($) => {
+export const $$:Cequal = ($) => {
     return $.this === $.that
 }

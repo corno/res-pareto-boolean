@@ -1,5 +1,5 @@
-import * as api from "../api"
+import { Cnot } from "../api"
 
-export const $$: api.Cnot = ($) => {
+export const $$:Cnot = ($) => {
     return !$
 }
