@@ -1,21 +1,20 @@
 import * as pt from 'pareto-core-types'
 
-import * as gglo from "./glossary"
+import * as gthis from "./glossary"
 
+export type Cand = gthis.FAnd
 
-export type Cand = gglo.FAnd
+export type Cequal = gthis.FEqual
 
-export type Cequal = gglo.FEqual
+export type CgreaterThan = gthis.FGreaterThan
 
-export type CgreaterThan = gglo.FGreaterThan
+export type CisZero = gthis.FIsZero
 
-export type CisZero = gglo.FIsZero
+export type Cnot = gthis.FNot
 
-export type Cnot = gglo.FNot
+export type Cor = gthis.FOr
 
-export type Cor = gglo.FOr
-
-export type CsmallerThan = gglo.FSmallerThan
+export type CsmallerThan = gthis.FSmallerThan
 
 export type API = {
     and: Cand

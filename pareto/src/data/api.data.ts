@@ -1,61 +1,21 @@
 import * as pd from 'pareto-core-data'
-import {
-    array,
-    dictionary,
-    group,
-    member,
-    number,
-    string,
-    taggedUnion,
-    types,
-    typeReference,
-    nested,
-    boolean,
-    func,
-    data,
-    type,
-} from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
-import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/submodules/moduleDefinition/shorthands"
+import { functionReference, constructor, algorithm, typeReference } from "lib-pareto-typescript-project/dist/submodules/api/shorthands"
 
-import * as gmoduleDefinition from "lib-pareto-typescript-project/dist/submodules/moduleDefinition"
-
+import * as gapi from "lib-pareto-typescript-project/dist/submodules/api"
 const d = pd.d
 
-export const $: gmoduleDefinition.T.ModuleDefinition<pd.SourceLocation> = {
-    'glossary': {
-        'imports': d({
-            "common": "glo-pareto-common",
-        }),
-        'parameters': d({}),
-        'types': d({
-            "BooleanRange": type(nested(boolean())),
-            "NumberPair": type(group({
-                "this": member(number()),
-                "that": member(number()),
-            })),
-        }),
-        'interfaces': d({}),
-        'functions': d({
-            "And": func(typeReference("BooleanRange"), null, null, data(typeReference("common", "Boolean"), false)),
-            "Or": func(typeReference("BooleanRange"), null, null, data(typeReference("common", "Boolean"), false)),
-            "GreaterThan": func(typeReference("NumberPair"), null, null, data(typeReference("common", "Boolean"), false)),
-            "SmallerThan": func(typeReference("NumberPair"), null, null, data(typeReference("common", "Boolean"), false)),
-            "Not": func(typeReference("common", "Boolean"), null, null, data(typeReference("common", "Boolean"), false)),
-            "IsZero": func(typeReference("common", "Number"), null, null, data(typeReference("common", "Boolean"), false)),
-            "Equal": func(typeReference("NumberPair"), null, null, data(typeReference("common", "Boolean"), false)),
-        }),
-    },
-    'api': {
-        'imports': d({}),
-        'algorithms': d({
-            "and": algorithm(definitionReference("And")),
-            "smallerThan": algorithm(definitionReference("SmallerThan")),
-            "greaterThan": algorithm(definitionReference("GreaterThan")),
-            "equal": algorithm(definitionReference("Equal")),
-            "or": algorithm(definitionReference("Or")),
-            "not": algorithm(definitionReference("Not")),
-            "isZero": algorithm(definitionReference("IsZero")),
-        })
-    },
+export const $: gapi.T.API<pd.SourceLocation> = {
+    'imports': d({
+        "this": "./glossary",
+    }),
+    'algorithms': d({
+        "and": algorithm(functionReference("this", {}, "And")),
+        "smallerThan": algorithm(functionReference("this", {}, "SmallerThan")),
+        "greaterThan": algorithm(functionReference("this", {}, "GreaterThan")),
+        "equal": algorithm(functionReference("this", {}, "Equal")),
+        "or": algorithm(functionReference("this", {}, "Or")),
+        "not": algorithm(functionReference("this", {}, "Not")),
+        "isZero": algorithm(functionReference("this", {}, "IsZero")),
+    })
 }
