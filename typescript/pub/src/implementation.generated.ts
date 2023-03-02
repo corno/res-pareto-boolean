@@ -1,4 +1,4 @@
-import { API } from "./api"
+import { API } from "./definition/api.generated"
 import { $$ as iand } from "./implementations/and.native"
 import { $$ as iequal } from "./implementations/equal.native"
 import { $$ as igreaterThan } from "./implementations/greaterThan.native"

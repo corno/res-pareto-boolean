@@ -1,4 +1,4 @@
-import { Cnot } from "../api"
+import { Cnot } from "../definition/api.generated"
 
 export const $$:Cnot = ($) => {
     return !$
