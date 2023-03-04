@@ -1,5 +1,5 @@
-import { CisZero } from "../definition/api.generated"
+import { isZero } from "../definition/api.generated"
 
-export const $$:CisZero = ($) => {
+export const $$: isZero = ($) => {
     return $ === 0
 }

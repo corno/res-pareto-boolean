@@ -28,6 +28,7 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> =  {
             "that": member(number()),
         })),
     }),
+    'builders': d({}),
     'interfaces': d({}),
     'functions': d({
         "And": func(typeReference("BooleanRange"), null, null, data(typeReference("common", "Boolean"), false)),

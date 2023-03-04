@@ -1,5 +1,5 @@
-import { Cnot } from "../definition/api.generated"
+import { not } from "../definition/api.generated"
 
-export const $$:Cnot = ($) => {
+export const $$: not = ($) => {
     return !$
 }

@@ -1,5 +1,5 @@
-import { Cequal } from "../definition/api.generated"
+import { equal } from "../definition/api.generated"
 
-export const $$:Cequal = ($) => {
+export const $$: equal = ($) => {
     return $.this === $.that
 }

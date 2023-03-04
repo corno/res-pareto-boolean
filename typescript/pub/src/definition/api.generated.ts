@@ -1,27 +1,27 @@
 import * as pt from 'pareto-core-types'
 
-import * as gthis from "./glossary"
+import * as g_this from "./glossary"
 
-export type Cand = gthis.FAnd
+export type and = g_this.F.And
 
-export type Cequal = gthis.FEqual
+export type equal = g_this.F.Equal
 
-export type CgreaterThan = gthis.FGreaterThan
+export type greaterThan = g_this.F.GreaterThan
 
-export type CisZero = gthis.FIsZero
+export type isZero = g_this.F.IsZero
 
-export type Cnot = gthis.FNot
+export type not = g_this.F.Not
 
-export type Cor = gthis.FOr
+export type or = g_this.F.Or
 
-export type CsmallerThan = gthis.FSmallerThan
+export type smallerThan = g_this.F.SmallerThan
 
 export type API = {
-    and: Cand
-    equal: Cequal
-    greaterThan: CgreaterThan
-    isZero: CisZero
-    not: Cnot
-    or: Cor
-    smallerThan: CsmallerThan
+    and: and
+    equal: equal
+    greaterThan: greaterThan
+    isZero: isZero
+    not: not
+    or: or
+    smallerThan: smallerThan
 }

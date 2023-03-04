@@ -1,8 +1,8 @@
 import * as pi from 'pareto-core-internals'
 
-import { Cor } from "../definition/api.generated"
+import { or } from "../definition/api.generated"
 
-export const $$: Cor = ($) => {
+export const $$: or = ($) => {
     let current = false
     pi.flatten($).forEach(($) => {
         current = current || $

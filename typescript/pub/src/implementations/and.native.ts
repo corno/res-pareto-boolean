@@ -1,8 +1,8 @@
 import * as pi from 'pareto-core-internals'
 
-import { Cand } from "../definition/api.generated"
+import { and } from "../definition/api.generated"
 
-export const $$:Cand = ($) => {
+export const $$: and = ($) => {
    let current = true
    pi.flatten($).forEach(($) => {
        current = current && $
