@@ -14,5 +14,5 @@ export const $: gapi.T.API<pd.SourceLocation> = {
         "or": algorithm(functionReference("this", {}, "Or")),
         "not": algorithm(functionReference("this", {}, "Not")),
         "isZero": algorithm(functionReference("this", {}, "IsZero")),
-    })
+    }),
 }
