@@ -1,6 +1,6 @@
 import * as pi from 'pareto-core-internals'
 
-import { and } from "../definition/api.generated"
+import { and } from "../api.generated"
 
 export const $$: and = ($) => {
    let current = true

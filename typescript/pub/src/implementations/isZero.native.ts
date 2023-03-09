@@ -1,4 +1,4 @@
-import { isZero } from "../definition/api.generated"
+import { isZero } from "../api.generated"
 
 export const $$: isZero = ($) => {
     return $ === 0

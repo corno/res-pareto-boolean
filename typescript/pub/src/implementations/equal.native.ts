@@ -1,4 +1,4 @@
-import { equal } from "../definition/api.generated"
+import { equal } from "../api.generated"
 
 export const $$: equal = ($) => {
     return $.this === $.that

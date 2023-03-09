@@ -1,6 +1,6 @@
 import * as pi from 'pareto-core-internals'
 
-import { or } from "../definition/api.generated"
+import { or } from "../api.generated"
 
 export const $$: or = ($) => {
     let current = false

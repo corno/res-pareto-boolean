@@ -1,4 +1,4 @@
-import { not } from "../definition/api.generated"
+import { not } from "../api.generated"
 
 export const $$: not = ($) => {
     return !$
