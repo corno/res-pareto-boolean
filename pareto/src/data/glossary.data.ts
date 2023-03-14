@@ -35,13 +35,13 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'type': ['synchronous', {
         'builders': d({}),
         'functions': d({
-            "And": sfunc(typeReference("BooleanRange"), null, null, sdata(externalTypeReference("common", "Boolean"))),
-            "Or": sfunc(typeReference("BooleanRange"), null, null, sdata(externalTypeReference("common", "Boolean"))),
-            "GreaterThan": sfunc(typeReference("NumberPair"), null, null, sdata(externalTypeReference("common", "Boolean"))),
-            "SmallerThan": sfunc(typeReference("NumberPair"), null, null, sdata(externalTypeReference("common", "Boolean"))),
-            "Not": sfunc(externalTypeReference("common", "Boolean"), null, null, sdata(externalTypeReference("common", "Boolean"))),
-            "IsZero": sfunc(externalTypeReference("common", "Number"), null, null, sdata(externalTypeReference("common", "Boolean"))),
-            "Equal": sfunc(typeReference("NumberPair"), null, null, sdata(externalTypeReference("common", "Boolean"))),
+            "And": sfunc(sdata(typeReference("BooleanRange")), sdata(externalTypeReference("common", "Boolean"))),
+            "Or": sfunc(sdata(typeReference("BooleanRange")), sdata(externalTypeReference("common", "Boolean"))),
+            "GreaterThan": sfunc(sdata(typeReference("NumberPair")), sdata(externalTypeReference("common", "Boolean"))),
+            "SmallerThan": sfunc(sdata(typeReference("NumberPair")), sdata(externalTypeReference("common", "Boolean"))),
+            "Not": sfunc(sdata(externalTypeReference("common", "Boolean")), sdata(externalTypeReference("common", "Boolean"))),
+            "IsZero": sfunc(sdata(externalTypeReference("common", "Number")), sdata(externalTypeReference("common", "Boolean"))),
+            "Equal": sfunc(sdata(typeReference("NumberPair")), sdata(externalTypeReference("common", "Boolean"))),
         }),
 
     }],
