@@ -1,5 +1,5 @@
-import { isZero } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: isZero = ($) => {
+export const $$: A.isZero = ($) => {
     return $ === 0
 }

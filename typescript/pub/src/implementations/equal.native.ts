@@ -1,5 +1,5 @@
-import { equal } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: equal = ($) => {
+export const $$: A.equal = ($) => {
     return $.this === $.that
 }

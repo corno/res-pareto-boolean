@@ -1,5 +1,5 @@
-import { smallerThan } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: smallerThan = ($) => {
+export const $$: A.smallerThan = ($) => {
     return $.this < $.that
 }

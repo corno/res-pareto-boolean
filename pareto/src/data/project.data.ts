@@ -6,8 +6,8 @@ import * as g_project from "lib-pareto-typescript-project/dist/submodules/projec
 const d = pd.d
 
 
-import { $ as api } from "./api.data"
-import { $ as glossary } from "./glossary.data"
+import { $ as api } from "./main/api.data"
+import { $ as glossary } from "./main/glossary.data"
 
 import { external, this_ } from "lib-pareto-typescript-project/dist/submodules/project/shorthands"
 
@@ -20,32 +20,55 @@ export const $: g_project.T.Project<pd.SourceLocation> = {
         "glo-pareto-common": null,
     }),
     'type': ['resource', {
-        'glossary': {
-            'root': glossary,
-            'imports': d({
-                "common": external("glo-pareto-common"),
-            }),
-        },
-        'api': {
-            'root': api,
+        'definition': {
+            'glossary': {
+                'root': glossary,
+                'imports': d({
+                    "common": external("glo-pareto-common"),
+                }),
+            },
+            'api': {
+                'root': api,
 
-            'imports': d({
-                "this": this_(),
-            }),
+                'imports': d({
+                    "this": this_(),
+                }),
+            },
         },
-        'nativeDependencies': d({}),
-        'devDependencies': d({}),
+        'temp': {
+            'nativeDependencies': d({}),
+            'devDependencies': d({}),
+        },
         'test': {
             'dependencies': d({
             }),
-            'glossary': {
-                'parameters': d({}),
-                'imports': d({}),
-                'types': d({}),
-                'type': ['synchronous', {
-                    'builders': d({}),
-                    'functions': d<g_glossary.T.Glossary._ltype.synchronous.functions.D<pd.SourceLocation>>({}),
-                }],
+            'definition': {
+                'glossary': {
+                    'root': {
+                        'parameters': d({}),
+                        'imports': d({}),
+                        'types': d({}),
+                        'asynchronous': {
+                            'interfaces': d({}),
+                            'constructors': d({}),
+                            'functions': d({}),
+                        },
+                        'synchronous': {
+                            'interfaces': d({}),
+                            'constructors': d({}),
+                            'functions': d({}),
+                        },
+                    
+
+                    },
+                    'imports': d({}),
+                },
+                'api': {
+                    'imports': d({}),
+                    'root': {
+                        'algorithms': d({}),
+                    },
+                },
             },
             'imports': d({}),
         }

@@ -1,5 +1,5 @@
-import { greaterThan } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: greaterThan = ($) => {
+export const $$: A.greaterThan = ($) => {
     return $.this > $.that
 }

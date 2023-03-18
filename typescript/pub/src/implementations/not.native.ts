@@ -1,5 +1,5 @@
-import { not } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: not = ($) => {
+export const $$: A.not = ($) => {
     return !$
 }
