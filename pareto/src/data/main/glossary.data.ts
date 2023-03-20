@@ -5,7 +5,7 @@ import {
     typeReference,
     data,
     boolean,
-    sfunc,
+    sfunction,
     type,
     number,
     externalTypeReference,
@@ -29,20 +29,19 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     }),
     'asynchronous': {
         'interfaces': d({}),
-        'constructors': d({}),
-        'functions': d({}),
+        'algorithms': d({}),
+        
     },
     'synchronous': {
         'interfaces': d({}),
-        'constructors': d({}),
-        'functions': d({
-            "And": sfunc(data(typeReference("BooleanRange")), externalTypeReference("common", "Boolean")),
-            "Or": sfunc(data(typeReference("BooleanRange")), externalTypeReference("common", "Boolean")),
-            "GreaterThan": sfunc(data(typeReference("NumberPair")), externalTypeReference("common", "Boolean")),
-            "SmallerThan": sfunc(data(typeReference("NumberPair")), externalTypeReference("common", "Boolean")),
-            "Not": sfunc(data(externalTypeReference("common", "Boolean")), externalTypeReference("common", "Boolean")),
-            "IsZero": sfunc(data(externalTypeReference("common", "Number")), externalTypeReference("common", "Boolean")),
-            "Equal": sfunc(data(typeReference("NumberPair")), externalTypeReference("common", "Boolean")),
+        'algorithms': d({
+            "And": sfunction(externalTypeReference("common", "Boolean"), data(typeReference("BooleanRange"))),
+            "Or": sfunction(externalTypeReference("common", "Boolean"), data(typeReference("BooleanRange"))),
+            "GreaterThan": sfunction(externalTypeReference("common", "Boolean"), data(typeReference("NumberPair"))),
+            "SmallerThan": sfunction(externalTypeReference("common", "Boolean"), data(typeReference("NumberPair"))),
+            "Not": sfunction(externalTypeReference("common", "Boolean"), data(externalTypeReference("common", "Boolean"))),
+            "IsZero": sfunction(externalTypeReference("common", "Boolean"), data(externalTypeReference("common", "Number"))),
+            "Equal": sfunction(externalTypeReference("common", "Boolean"), data(typeReference("NumberPair"))),
         }),
     },
 

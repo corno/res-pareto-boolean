@@ -8,39 +8,50 @@ export namespace ASYNC {
     
     export namespace I {}
     
-    export namespace C {}
-    
-    export namespace F {}
+    export namespace A {}
 }
 
 export namespace SYNC {
     
     export namespace I {}
     
-    export namespace I2 {}
+    export namespace IW {}
     
-    export namespace I3 {}
-    
-    export namespace C {}
-    
-    export namespace C2 {}
-    
-    export namespace C3 {}
-    
-    export namespace F {
+    export namespace A {
         
-        export type And = ($: T.BooleanRange) => g_common.T.Boolean
         
-        export type Equal = ($: T.NumberPair) => g_common.T.Boolean
+        export namespace F {
+            export type And = ($: T.BooleanRange) => g_common.T.Boolean
+        }
         
-        export type GreaterThan = ($: T.NumberPair) => g_common.T.Boolean
         
-        export type IsZero = ($: g_common.T.Number) => g_common.T.Boolean
+        export namespace F {
+            export type Equal = ($: T.NumberPair) => g_common.T.Boolean
+        }
         
-        export type Not = ($: g_common.T.Boolean) => g_common.T.Boolean
         
-        export type Or = ($: T.BooleanRange) => g_common.T.Boolean
+        export namespace F {
+            export type GreaterThan = ($: T.NumberPair) => g_common.T.Boolean
+        }
         
-        export type SmallerThan = ($: T.NumberPair) => g_common.T.Boolean
+        
+        export namespace F {
+            export type IsZero = ($: g_common.T.Number) => g_common.T.Boolean
+        }
+        
+        
+        export namespace F {
+            export type Not = ($: g_common.T.Boolean) => g_common.T.Boolean
+        }
+        
+        
+        export namespace F {
+            export type Or = ($: T.BooleanRange) => g_common.T.Boolean
+        }
+        
+        
+        export namespace F {
+            export type SmallerThan = ($: T.NumberPair) => g_common.T.Boolean
+        }
     }
 }
