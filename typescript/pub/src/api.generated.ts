@@ -20,11 +20,11 @@ export namespace A {
 }
 
 export type API = {
-    and: A.and
-    equal: A.equal
-    greaterThan: A.greaterThan
-    isZero: A.isZero
-    not: A.not
-    or: A.or
-    smallerThan: A.smallerThan
+    readonly 'and': A.and
+    readonly 'equal': A.equal
+    readonly 'greaterThan': A.greaterThan
+    readonly 'isZero': A.isZero
+    readonly 'not': A.not
+    readonly 'or': A.or
+    readonly 'smallerThan': A.smallerThan
 }
