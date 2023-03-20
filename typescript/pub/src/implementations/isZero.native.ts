@@ -1,5 +1,7 @@
 import { A } from "../api.generated"
 
-export const $$: A.isZero = ($) => {
-    return $ === 0
+export const $$: A.isZero = () => {
+    return ($) => {
+        return $ === 0
+    }
 }

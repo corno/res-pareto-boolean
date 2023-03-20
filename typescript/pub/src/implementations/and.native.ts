@@ -2,10 +2,12 @@ import * as pi from 'pareto-core-internals'
 
 import { A } from "../api.generated"
 
-export const $$: A.and = ($) => {
-   let current = true
-   pi.flatten($).forEach(($) => {
-       current = current && $
-   })
-   return current
+export const $$: A.and = () => {
+    return ($) => {
+        let current = true
+        pi.flatten($).forEach(($) => {
+            current = current && $
+        })
+        return current
+    }
 }

@@ -1,5 +1,7 @@
 import { A } from "../api.generated"
 
-export const $$: A.not = ($) => {
-    return !$
+export const $$: A.not = () => {
+    return ($) => {
+        return !$
+    }
 }
