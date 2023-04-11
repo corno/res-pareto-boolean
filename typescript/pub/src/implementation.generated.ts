@@ -7,7 +7,7 @@ import { $$ as inot } from "./implementations/not.native"
 import { $$ as ior } from "./implementations/or.native"
 import { $$ as ismallerThan } from "./implementations/smallerThan.native"
 
-export const $r: API = {
+export const $api: API = {
     'and': iand,
     'equal': iequal,
     'greaterThan': igreaterThan,
