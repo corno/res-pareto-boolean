@@ -8,10 +8,10 @@ export namespace T {
     
     export namespace BooleanRange {
         
-        export type N = boolean
+        export type A = boolean
     }
     
-    export type BooleanRange = pt.Nested<boolean>
+    export type BooleanRange = pt.Array<boolean>
     
     export namespace NumberPair {
         

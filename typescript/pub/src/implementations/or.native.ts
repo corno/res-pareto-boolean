@@ -5,7 +5,7 @@ import { A } from "../api.generated"
 export const $$: A.or = () => {
     return ($) => {
         let current = false
-        pi.flatten($).forEach(($) => {
+        pi.xflatten($).forEach(($) => {
             current = current || $
         })
         return current

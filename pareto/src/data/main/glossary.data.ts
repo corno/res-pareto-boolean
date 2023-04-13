@@ -1,15 +1,17 @@
 import * as pd from 'pareto-core-data'
 
 import {
-    nested, member, group,
-    typeReference,
-    data,
+    array,
     boolean,
+    data,
+    externalTypeReference,
+    group,
+    imp,
+    member,
+    number,
     sfunction,
     type,
-    number,
-    externalTypeReference,
-    imp,
+    typeReference,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
 import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
@@ -23,7 +25,7 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'root': {
         'namespaces': d({}),
         'types': d({
-            "BooleanRange": type(nested(boolean())),
+            "BooleanRange": type(array(boolean())),
             "NumberPair": type(group({
                 "this": member(number()),
                 "that": member(number()),

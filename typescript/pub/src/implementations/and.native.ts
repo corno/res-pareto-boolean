@@ -5,7 +5,7 @@ import { A } from "../api.generated"
 export const $$: A.and = () => {
     return ($) => {
         let current = true
-        pi.flatten($).forEach(($) => {
+        $.__forEach(($) => {
             current = current && $
         })
         return current
